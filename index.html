@@ -110,7 +110,7 @@
         });
 
         //mute button
-        $("#mute" ).show().click(function(){
+        /*$("#mute" ).show().click(function(){
             $("#jp").jPlayer("pause");
             $("#mute" ).hide();
             $("#unmute" ).show().click(function(){
@@ -120,7 +120,7 @@
             });
         });
 
-
+*/
         $( "#question" ).animate({
             "font-size": "20"
         }, 30000,'easeOutQuad', function() {
@@ -136,16 +136,18 @@
     	});
 
         // jPlayer
-        $("#jp").jPlayer({
+        /*$("#jp").jPlayer({
             ready: function () {
                 $(this).jPlayer("setMedia", {
-                    mp3: "life-on-mars.mp3"
+                    mp3: "life-on-mars.mp3",
+                	solution: "html" // Valid solutions: html, flash. Order defines priority. 1st is highest,
+
                 });
                 $("#jp").jPlayer("play");
             },
             supplied: "mp3"
         });
-
+*/
         // mute button
     })
 </script>
@@ -170,4 +172,8 @@
     })();
 
 </script>
+<audio autoplay>
+  <source src="life-on-mars.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 </html>
